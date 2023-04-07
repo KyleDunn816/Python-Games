@@ -1,0 +1,455 @@
+#Tic Tac Toe By Kyle Dunn 2023
+import tkinter as tk
+root = tk.Tk()
+#Player 1 = 0 or 0
+#Player 2 = 1 or X
+#"Global Variable"
+playval = 0
+#destroys the frame when a winner or tie is declared
+def game_over():
+    global frame
+    frame.destroy()
+#reads playval to change label of player 1 and 2.
+def who_turn():
+    #global  
+    global playval
+    if playval == 0:
+        labelName.config(text="player 2")
+        playval += 1
+    elif playval == 1:
+        labelName.config(text="player 1")
+        playval += 1
+    elif playval == 2:
+        labelName.config(text="player 2")
+        playval += 1
+    elif playval == 3:
+        labelName.config(text="player 1")    
+        playval += 1
+    elif playval == 4:
+        labelName.config(text="player 2")    
+        playval += 1
+    elif playval == 5:
+        labelName.config(text="player 1")    
+        playval += 1
+    elif playval == 6:
+        labelName.config(text="player 2")    
+        playval += 1
+    elif playval == 7:
+        labelName.config(text="player 1")    
+        playval += 1
+    elif playval == 8:
+        labelName.config(text="player 2")
+        playval += 1
+#quits program
+def quit_program():
+    root.destroy()
+#When Top Left button is clicked works with its respective callback function to disable the button.    
+def button_clickTL():
+    buttonTL.config(state="disabled")
+#When Top Middle button is clicked works with its respective callback function to disable the button.
+def button_clickTM():
+    buttonTM.config(state="disabled")
+#When Top Right button is clicked works with its respective callback function to disable the button.
+def button_clickTR():
+    buttonTR.config(state="disabled")
+#When Middle Left button is clicked works with its respective callback function to disable the button.   
+def button_clickML():
+    buttonML.config(state="disabled")
+#When Middle Middle button is clicked works with its respective callback function to disable the button.
+def button_clickMM():
+    buttonMM.config(state="disabled")
+#When Middle Right button is clicked works with its respective callback function to disable the button.
+def button_clickMR():
+    buttonMR.config(state="disabled")
+#When End Left button is clicked works with its respective callback function to disable the button.
+def button_clickEL():
+    buttonEL.config(state="disabled")
+#When End Middle button is clicked works with its respective callback function to disable the button.
+def button_clickEM():
+    buttonEM.config(state="disabled")
+#When End Right button is clicked works with its respective callback function to disable the button.
+def button_clickER():
+    buttonER.config(state="disabled")
+#Reads playval to change the corresponding label for X or O
+def buttTL():
+    if playval == 0:
+       labelTL.config(text="0")
+    elif playval == 1:
+     labelTL.config(text="X")
+    elif playval == 2:
+     labelTL.config(text="0")
+    elif playval == 3:
+     labelTL.config(text="X")
+    elif playval == 4:
+     labelTL.config(text="0")
+    elif playval == 5:
+     labelTL.config(text="X")
+    elif playval == 6:
+     labelTL.config(text="0") 
+    elif playval == 7:
+     labelTL.config(text="X") 
+    elif playval == 8:
+     labelTL.config(text="0")
+#Reads playval to change the corresponding label for X or O
+def buttTM():
+    if playval == 0:
+       labelTM.config(text="0")
+    elif playval == 1:
+     labelTM.config(text="X")
+    elif playval == 2:
+     labelTM.config(text="0")
+    elif playval == 3:
+     labelTM.config(text="X")
+    elif playval == 4:
+     labelTM.config(text="0")
+    elif playval == 5:
+     labelTM.config(text="X")
+    elif playval == 6:
+     labelTM.config(text="0") 
+    elif playval == 7:
+     labelTM.config(text="X") 
+    elif playval == 8:
+     labelTM.config(text="0")
+#Reads playval to change the corresponding label for X or O     
+def buttTR():
+    if playval == 0:
+       labelTR.config(text="0")
+    elif playval == 1:
+     labelTR.config(text="X")
+    elif playval == 2:
+     labelTR.config(text="0")
+    elif playval == 3:
+     labelTR.config(text="X")
+    elif playval == 4:
+     labelTR.config(text="0")
+    elif playval == 5:
+     labelTR.config(text="X")
+    elif playval == 6:
+     labelTR.config(text="0") 
+    elif playval == 7:
+     labelTR.config(text="X") 
+    elif playval == 8:
+     labelTL.config(text="0")
+#Reads playval to change the corresponding label for X or O
+def buttML():
+    if playval == 0:
+       labelML.config(text="0")
+    elif playval == 1:
+     labelML.config(text="X")
+    elif playval == 2:
+     labelML.config(text="0")
+    elif playval == 3:
+     labelML.config(text="X")
+    elif playval == 4:
+     labelML.config(text="0")
+    elif playval == 5:
+     labelML.config(text="X")
+    elif playval == 6:
+     labelML.config(text="0") 
+    elif playval == 7:
+     labelML.config(text="X") 
+    elif playval == 8:
+     labelML.config(text="0")     
+#Reads playval to change the corresponding label for X or O
+def buttMM():
+    if playval == 0:
+       labelMM.config(text="0")
+    elif playval == 1:
+     labelMM.config(text="X")
+    elif playval == 2:
+     labelMM.config(text="0")
+    elif playval == 3:
+     labelMM.config(text="X")
+    elif playval == 4:
+     labelMM.config(text="0")
+    elif playval == 5:
+     labelMM.config(text="X")
+    elif playval == 6:
+     labelMM.config(text="0") 
+    elif playval == 7:
+     labelMM.config(text="X") 
+    elif playval == 8:
+     labelMM.config(text="0")
+#Reads playval to change the corresponding label for X or O
+def buttMR():
+    if playval == 0:
+       labelMR.config(text="0")
+    elif playval == 1:
+     labelMR.config(text="X")
+    elif playval == 2:
+     labelMR.config(text="0")
+    elif playval == 3:
+     labelMR.config(text="X")
+    elif playval == 4:
+     labelMR.config(text="0")
+    elif playval == 5:
+     labelMR.config(text="X")
+    elif playval == 6:
+     labelMR.config(text="0") 
+    elif playval == 7:
+     labelMR.config(text="X") 
+    elif playval == 8:
+     labelMR.config(text="0")
+#Reads playval to change the corresponding label for X or O     
+def buttEL():
+    if playval == 0:
+       labelEL.config(text="0")
+    elif playval == 1:
+     labelEL.config(text="X")
+    elif playval == 2:
+     labelEL.config(text="0")
+    elif playval == 3:
+     labelEL.config(text="X")
+    elif playval == 4:
+     labelEL.config(text="0")
+    elif playval == 5:
+     labelEl.config(text="X")
+    elif playval == 6:
+     labelEL.config(text="0") 
+    elif playval == 7:
+     labelEL.config(text="X") 
+    elif playval == 8:
+     labelEL.config(text="0")
+#Reads playval to change the corresponding label for X or O
+def buttEM():
+    if playval == 0:
+       labelEM.config(text="0")
+    elif playval == 1:
+     labelEM.config(text="X")
+    elif playval == 2:
+     labelEM.config(text="0")
+    elif playval == 3:
+     labelEM.config(text="X")
+    elif playval == 4:
+     labelEM.config(text="0")
+    elif playval == 5:
+     labelEM.config(text="X")
+    elif playval == 6:
+     labelEM.config(text="0") 
+    elif playval == 7:
+     labelEM.config(text="X") 
+    elif playval == 8:
+     labelEM.config(text="0") 
+#Reads playval to change the corresponding label for X or O
+def buttER():
+    if playval == 0:
+       labelER.config(text="0")
+    elif playval == 1:
+     labelER.config(text="X")
+    elif playval == 2:
+     labelER.config(text="0")
+    elif playval == 3:
+     labelER.config(text="X")
+    elif playval == 4:
+     labelER.config(text="0")
+    elif playval == 5:
+     labelER.config(text="X")
+    elif playval == 6:
+     labelER.config(text="0") 
+    elif playval == 7:
+     labelER.config(text="X") 
+    elif playval == 8:
+     labelER.config(text="0")     
+#callback for corresponding button uses butt() who_turn and button_click() 
+def button_callbackTL():
+    buttTL()
+    who_turn()
+    button_clickTL()
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackTM():
+    buttTM()
+    who_turn()
+    button_clickTM()
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackTR():
+    buttTR()
+    who_turn()
+    button_clickTR()
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackML():
+    buttML()
+    who_turn()
+    button_clickML()    
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackMM():
+    buttMM()
+    who_turn()
+    button_clickMM()
+#callback for corresponding button uses butt() who_turn and button_click()    
+def button_callbackMR():
+    buttMR()
+    who_turn()
+    button_clickMR()
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackEL():
+    buttEL()
+    who_turn()
+    button_clickEL()    
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackEM():
+    buttEM()
+    who_turn()
+    button_clickEM()
+#callback for corresponding button uses butt() who_turn and button_click()
+def button_callbackER():
+    buttER()
+    who_turn()
+    button_clickER() 
+#makes frame for game
+frame = tk.LabelFrame(root, text='TIC TAC TOE', height=550, width=400)
+frame.pack()
+#labels for board
+#TOP ROW
+#label Top Left
+labelTL = tk.Label(frame, text = "TL")
+labelTL.grid(row = 0, column= 0)
+#label Top Middle
+labelTM = tk.Label(frame, text = "TM")
+labelTM.grid(row = 0, column= 1)
+#label Top Right
+labelTR = tk.Label(frame, text = "TM")
+labelTR.grid(row = 0, column= 2)
+#MIDDLE ROW
+#middle left label
+labelML = tk.Label(frame, text = "ML")
+labelML.grid(row = 1, column= 0)
+#middle middle label
+labelMM = tk.Label(frame, text = "MM")
+labelMM.grid(row = 1, column= 1)
+#middle right label
+labelMR = tk.Label(frame, text = "MR")
+labelMR.grid(row = 1, column= 2)
+#END ROW
+#End left label
+labelEL = tk.Label(frame, text = "EL")
+labelEL.grid(row = 2, column= 0)
+#End middle label
+labelEM = tk.Label(frame, text = "EM")
+labelEM.grid(row = 2, column= 1)
+#End right label
+labelER = tk.Label(frame, text = "ER")
+labelER.grid(row = 2, column= 2)
+#Label for who's turn it is
+labelName = tk.Label(frame, text = "player 1")
+labelName.grid(row = 0, column= 3)
+#quit button set up
+quit_button = tk.Button(frame, text="Quit", command=quit_program)
+quit_button.grid(row=5, column = 3)
+#TOP ROW BUTTONS
+#top left button
+buttonTL = tk.Button(frame, text="Top Left", command=button_callbackTL)
+buttonTL.grid(row=3, column=0)
+#top middle button
+buttonTM = tk.Button(frame, text="Top Mid", command=button_callbackTM)
+buttonTM.grid(row=3, column = 1)
+#top right button
+buttonTR = tk.Button(frame, text="Top right", command=button_callbackTR)
+buttonTR.grid(row=3, column = 2)
+#MIDDLE ROW BUTTONS
+#middle left button
+buttonML = tk.Button(frame, text="Mid Left", command=button_callbackML)
+buttonML.grid(row=4, column=0)
+#middle middle button
+buttonMM = tk.Button(frame, text="Mid Mid", command=button_callbackMM)
+buttonMM.grid(row=4, column = 1)
+#middle right button
+buttonMR = tk.Button(frame, text="Mid right", command=button_callbackMR)
+buttonMR.grid(row=4, column = 2)
+#END ROW BUTTONS
+#end left button
+buttonEL = tk.Button(frame, text="End Left", command=button_callbackEL)
+buttonEL.grid(row=5, column=0)
+#end middle button
+buttonEM = tk.Button(frame, text="End Mid", command=button_callbackEM)
+buttonEM.grid(row=5, column = 1)
+#end right button
+buttonER = tk.Button(frame, text="End Right", command=button_callbackER)
+buttonER.grid(row=5, column = 2)
+#Player 1 = 0 or 0
+#Player 2 = 1 or X
+# Define the function to check if all three labels read 0
+def check_winner():
+    #top row
+    if labelTL['text'] == "0" and labelTM['text'] == "0" and labelTR['text'] == "0":
+        print("Player 1 is the Winner!")
+        quit_program()
+    #middle row
+    elif labelML['text'] == "0" and labelMM['text'] == "0" and labelMR['text'] == "0":
+        print("Player 1 is the Winner!")
+        quit_program()
+    #end row    
+    elif labelEL['text'] == "0" and labelEM['text'] == "0" and labelER['text'] == "0":
+        print("Player 1 is the Winner!")
+        quit_program()
+    #top left to end right    
+    elif labelTL['text'] == "0" and labelMM['text'] == "0" and labelER['text'] == "0":
+        print("Player 1 is the Winner!")
+        quit_program()
+    #end left to top right   
+    elif labelEL['text'] == "0" and labelMM['text'] == "0" and labelTR['text'] == "0":
+        print("Player 1 is the Winner!")
+        quit_program()
+    #top row down    
+    elif labelTL['text'] == "0" and labelML['text'] == "0" and labelEL['text'] == "0":
+      print("Player 1 is the Winner!")
+      quit_program()
+    #middle row down  
+    elif labelTM['text'] == "0" and labelMM['text'] == "0" and labelEM['text'] == "0":
+      print("Player 1 is the Winner!")
+      quit_program()
+    #right row down  
+    elif labelTR['text'] == "0" and labelMR['text'] == "0" and label['text'] == "0":
+      print("Player 1 is the Winner!")
+      quit_program()
+
+    #player 2 stuff
+    #top row  
+    elif labelTL['text'] == "X" and labelTM['text'] == "X" and labelTR['text'] == "X":
+       print("Player 2 is the Winner!")
+       quit_program()
+    #middle row   
+    elif labelML['text'] == "X" and labelMM['text'] == "X" and labelMR['text'] == "X":
+       print("Player 2 is the Winner!")
+       quit_program()
+    #end row   
+    elif labelEL['text'] == "X" and labelEM['text'] == "X" and labelER['text'] == "X":
+       print("Player 2 is the Winner!")
+       quit_program()
+    #top left to end right  
+    elif labelTL['text'] == "X" and labelMM['text'] == "X" and labelER['text'] == "X":
+       print("Player 2 is the Winner!")
+       quit_program()
+    #end left to top right   
+    elif labelEL['text'] == "X" and labelMM['text'] == "X" and labelTR['text'] == "X":
+      print("Player 2 is the Winner!")
+      quit_program()  
+    #top row down    
+    elif labelTL['text'] == "1" and labelML['text'] == "1" and labelEL['text'] == "1":
+      print("Player 2 is the Winner!")
+      quit_program()
+    #middle row down  
+    elif labelTM['text'] == "1" and labelMM['text'] == "1" and labelEM['text'] == "1":
+      print("Player 2 is the Winner!")
+      quit_program()
+    #right row down  
+    elif labelTR['text'] == "1" and labelMR['text'] == "1" and label['text'] == "1":
+      print("Player 2 is the Winner!")
+      quit_program()
+    elif playval == 9:
+        print("Its a tie, No Winner!")    
+        quit_program  
+#Call the check_winner function whenever a label's text is changed
+#top row
+labelTL.bind("<Configure>", lambda event: check_winner())
+labelTM.bind("<Configure>", lambda event: check_winner())
+labelTR.bind("<Configure>", lambda event: check_winner())
+#middle row
+labelML.bind("<Configure>", lambda event: check_winner())
+labelMM.bind("<Configure>", lambda event: check_winner())
+labelMR.bind("<Configure>", lambda event: check_winner())
+#end row 
+labelEL.bind("<Configure>", lambda event: check_winner())
+labelEM.bind("<Configure>", lambda event: check_winner())
+labelER.bind("<Configure>", lambda event: check_winner())
+#keep this at the bottom
+root.mainloop()
